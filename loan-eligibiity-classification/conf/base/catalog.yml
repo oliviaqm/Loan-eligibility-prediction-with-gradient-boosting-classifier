@@ -1,0 +1,19 @@
+data:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/LoansTrainingSetV2.csv
+
+preprocessed_data_1:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/preprocessed_data_1.csv
+
+preprocessed_data_2:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/preprocessed_data_2.csv
+
+preprocessed_data_3:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/preprocessed_data_3.csv
+
+preprocessed_data_4:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/preprocessed_data_4.csv

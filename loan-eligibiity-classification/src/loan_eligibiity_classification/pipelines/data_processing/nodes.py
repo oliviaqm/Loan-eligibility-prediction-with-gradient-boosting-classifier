@@ -22,6 +22,13 @@ from xgboost import XGBClassifier
 import joblib
 from imblearn.over_sampling import SMOTE
 
+# def create_small_dataset(data:pd.DataFrame) ->pd.DataFrame:
+#     """
+#     Create a small dataset to work with, in case of problems with computer memory.
+#     """
+#     small_data = data.sample(frac=0.3)
+#     return small_data
+
 def replace_outliers(data:pd.DataFrame) -> pd.DataFrame:
     """
     Preprocess data by replacing outliers.
@@ -86,7 +93,11 @@ def convert_cat_to_num(data:pd.DataFrame)-> pd.DataFrame:
     """
     Convert categorical features into numerical form, using get_dummies.
     """
-    data = pd.get_dummies(data, drop_first=True)
+    cat_cols = ['Term','Years in current job','Home Ownership','Purpose']
+
+    for c in cat_cols:
+        data[c] = pd.factorize(data[c])[0]
+    
     return data
 
 def replace_missing_values(data:pd.DataFrame) -> pd.DataFrame:

@@ -2,18 +2,39 @@ data:
   type: pandas.CSVDataSet
   filepath: data/01_raw/LoansTrainingSetV2.csv
 
-preprocessed_data_1:
-  type: pandas.CSVDataSet
-  filepath: data/02_intermediate/preprocessed_data_1.csv
+# small_data:
+#   type: pandas.CSVDataSet
+#   filepath: data/01_raw/LoansTrainingSetSmall.csv
 
-preprocessed_data_2:
-  type: pandas.CSVDataSet
-  filepath: data/02_intermediate/preprocessed_data_2.csv
+# preprocessed_data_1:
+#   type: pandas.CSVDataSet
+#   filepath: data/02_intermediate/preprocessed_data_1.csv
 
-preprocessed_data_3:
-  type: pandas.CSVDataSet
-  filepath: data/02_intermediate/preprocessed_data_3.csv
+# preprocessed_data_2:
+#   type: pandas.CSVDataSet
+#   filepath: data/02_intermediate/preprocessed_data_2.csv
 
 preprocessed_data_4:
   type: pandas.CSVDataSet
   filepath: data/02_intermediate/preprocessed_data_4.csv
+
+classifier: # simple example without compression
+  type: pickle.PickleDataSet
+  filepath: data/07_model_output/gbm.pkl
+  backend: pickle
+
+models_report:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/models_report.csv
+
+y_pred:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/y_pred.csv
+
+y_pred_proba:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/y_pred_proba.csv
+
+
+
+

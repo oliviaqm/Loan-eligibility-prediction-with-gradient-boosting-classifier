@@ -1,0 +1,26 @@
+model_options:
+  test_size: 0.3
+  random_state: 22
+  features:
+    - 'Current Loan Amount'
+    - 'Term'
+    - 'Credit Score'
+    - 'Years in current job'
+    - 'Home Ownership'
+    - 'Annual Income'
+    - 'Purpose'
+    - 'Monthly Debt'
+    - 'Years of Credit History'
+    - 'Months since last delinquent'
+    - 'Number of Open Accounts'
+    - 'Number of Credit Problems'
+    - 'Current Credit Balance'
+    - 'Maximum Open Credit'
+    - 'Bankruptcies'
+    -  'Tax Liens'
+
+hyperparams:
+  max_depth: 6
+  n_estimators: 100
+  max_features: 0.3
+
